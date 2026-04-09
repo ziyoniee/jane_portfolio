@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../목_코딩/Genesis"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Jiyeon_portfolio"
+	}
+}

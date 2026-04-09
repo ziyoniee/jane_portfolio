@@ -1,0 +1,734 @@
+@charset "utf-8";
+
+/* Base */
+
+body {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  background-color: #f3f3f1;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main,
+section {
+  width: 100%;
+  position: relative;
+}
+
+img,
+video {
+  display: block;
+  width: 100%;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* common */
+
+.hero-title-back,
+.hero-title-front,
+.about-bg-text,
+.about-name,
+.contact-title,
+.contact-bg-text {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Side Navigation */
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.side-nav {
+  position: absolute;
+  top: 50%;
+  right: 42px;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  will-change: transform;
+}
+
+.side-nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.side-nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.side-nav_text {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #aeaeae;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.35s ease, transform 0.35s ease, color 0.3s ease;
+}
+
+.side-nav_link::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #aeaeae;
+  transition: width 0.3s ease, background-color 0.3s ease, height 0.3s ease;
+}
+
+.side-nav_link:hover::after {
+  width: 28px;
+  background-color: #70ffea;
+}
+
+.side-nav_link:hover .side-nav_text {
+  color: #70ffea;
+}
+
+/* Over hero scroll */
+.header.nav-collapsed .side-nav_text {
+  opacity: 0;
+  transform: translateX(12px);
+  pointer-events: none;
+}
+
+.header.nav-collapsed .side-nav_link {
+  gap: 0;
+}
+
+.header.nav-collapsed .side-nav_link::after {
+  width: 20px;
+}
+
+
+
+/* right GNB icon button - Hidden */
+.menu-toggle {
+  display: none;
+}
+
+
+/* ===== Section 01 Hero CSS ===== */
+
+.hero {
+  position: relative;
+  height: 1080px;
+  background-color: #222222;
+}
+
+.hero-label {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.hero-label span {
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Title + Vedio Wrap */
+.hero-visual {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 1000px;
+  height: 760px;
+  transform: translateX(-50%);
+  transform-origin: top center;
+}
+
+/* Back title */
+.hero-title-back {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 110px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Video Frame */
+.hero-video-frame {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 20px solid #131313;
+  z-index: 3;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1) brightness(0.9);
+}
+
+/* Front Title */
+.hero-title-front {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #70FFEA;
+  text-align: center;
+  font-size: 250px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+/* Bottom intro */
+.hero-intro {
+  position: absolute;
+  left: 50%;
+  bottom: 72px;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.hero-text {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 150%;
+}
+
+.hero-text + .hero-text {
+  margin-top: 2px;
+}
+
+
+
+/* ====== Section02 About CSS ===== */
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 52vw;
+  background-color: #f2f2f0;
+  overflow: hidden;
+}
+
+/* background type */
+.about-bg-text {
+  position: absolute;
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* top */
+.about-bg-text-top {
+  top: -1.2vw;
+  left: 0;
+  transform: rotate(180deg);
+  font-size: clamp(140px, 15vw, 320px);
+  color: #959595;
+}
+
+/* bottom */
+.about-bg-text-bottom {
+  right: 0;
+  bottom: -0.8vw;
+  font-size: clamp(120px, 12vw, 260px);
+  color: #393939;
+}
+
+/* main container */
+.about-container {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+/* left group */
+.about-left-wrap {
+  position: absolute;
+  left: 0;
+  top: 18.75vw;          /* 360px / 1920 */
+  width: 46.875vw;       /* 900px / 1920 정도 */
+  min-width: 760px;
+  max-width: 980px;
+  height: 36.5vw;
+}
+
+/* left image */
+.about-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21.35vw;        /* 410px / 1920 */
+  max-width: 410px;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* center text */
+.about-content {
+  position: absolute;
+  top: 5.2vw;
+  left: 24vw;
+  width: 19.8vw;
+  min-width: 300px;
+}
+
+.about-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(20px, 1.7vw, 32px);
+  line-height: 1.05;
+  color: #222;
+}
+
+.about-divider {
+  width: clamp(42px, 3.1vw, 60px);
+  height: 1px;
+  margin: 2vw 0;
+  background-color: #222;
+}
+
+.about-text-kor,
+.about-text-eng {
+  margin: 0;
+  width: 450px;
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(14px, 0.83vw, 16px);
+  line-height: 1.95;
+  color: #222;
+  word-break: keep-all;
+}
+
+.about-text-kor {
+  margin-bottom: 1.45vw;
+}
+
+/* right side */
+.about-side {
+  position: absolute;
+  top: 4.5vw;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 12.25vw;
+  min-width: 210px;
+}
+
+.about-side-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.85vw;
+}
+
+.about-side-item p {
+  margin: 0;
+  width: 6.25vw;
+  min-width: 110px;
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(11px, 0.68vw, 13px);
+  line-height: 1.5;
+  color: #222;
+  text-align: right;
+}
+
+.about-side-item img {
+  display: block;
+  width: clamp(62px, 4.3vw, 82px);
+  height: clamp(62px, 4.3vw, 82px);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* ===== Section03 Project & Work CSS ===== */
+
+.project {
+  position: relative;
+  background-color: #222;
+  overflow: hidden;
+}
+
+/* title */
+.project-heading {
+  position: absolute;
+  top: 20%;
+  left: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.project-main-title {
+  margin: 0;
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-size: 8.5vw;
+  font-weight: 100;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #70ffea;
+}
+
+/* grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 18vw;
+  width: 100%;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  background-color: #232323;
+}
+
+.project-card.narrow {
+  grid-column: span 1;
+}
+
+.project-card.wide {
+  grid-column: span 2;
+}
+
+.project-card.more-wide {
+  grid-column: span 3;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.78);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%) brightness(1);
+}
+
+.project-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5vw 0.8vw;
+  background: rgba(0,0,0,0.35);
+}
+
+.project-caption p {
+  margin: 0;
+  font-size: clamp(10px, 0.6vw, 12px);
+  font-weight: 300;
+  line-height: 1.4;
+  color: #f4f4f4;
+}
+
+
+/* ===== Section04 Profile CSS === */
+
+.profile {
+  background-color: #222;
+  color: #f4f4f4;
+  padding: 6vw 10vw 2vw;
+}
+
+.profile-header {
+  align-items: center;
+  gap: 1.5vw;
+  margin-bottom: 3vw;
+}
+
+.profile-title {
+  font-size: 7vw;
+  font-weight: 100;
+  line-height: 0.7;
+  letter-spacing: -0.05em;
+  padding-left: 3vw;
+  color: #70ffea;
+}
+
+.profile-line {
+  flex: 1;
+  height: 1px;
+  background-color: #9c9c9c;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 6vw;
+}
+
+.profile-left {
+  width: 57%;
+}
+
+.profile-right {
+  width: 43%;
+}
+
+.profile-block {
+  margin-bottom: 3vw;
+}
+
+.profile-block h4 {
+  font-size: clamp(18px, 1.2vw, 24px);
+  font-weight: 500;
+  color: #70ffea;
+  margin-bottom: 1vw;
+  padding-bottom: 0.8vw;
+  border-bottom: 1px solid #9c9c9c;
+}
+
+.profile-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.profile-block li {
+  font-size: clamp(10px, 0.75vw, 16px);
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ededed;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(48px, 3.4vw));
+  gap: 3vw;
+  margin-top: 2.5vw;
+  margin-bottom: 4.3vw;
+}
+
+.skill-item:nth-child(6) {
+  grid-column: 1;
+}
+
+.skill-item:nth-child(9) {
+  grid-column: 1;
+}
+
+.skill-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(160px, 11vw, 220px);
+  height: clamp(38px, 2.5vw, 46px);
+  padding: 0 1.2vw;
+  background-color: #70ffea;
+  color: #111;
+  font-size: clamp(12px, 0.75vw, 16px);
+  font-weight: 500;
+}
+
+.profile-footer{
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(14px, 0.75vw, 16px);
+  font-weight: 200;
+  margin-top: 3vw;
+}
+
+
+
+
+/* ===== Section05 Contact CSS =====*/
+
+.contact {
+  background-color: #f2f2f0;
+  overflow: hidden;
+  padding: 7vw 5vw 0vw;
+}
+
+.contact-inner {
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+}
+
+.contact-heading {
+  width: 42%;
+  margin-left: 42%;
+  margin-bottom: 2.5vw;
+}
+
+.contact-title {
+  font-size: clamp(25px, 3.2vw, 68px);
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  font-weight: 100;
+  line-height: 0.7;
+  letter-spacing: -0.04em;
+  color: #8b8b8b;
+}
+
+.contact-title-line{
+  border: 0.2px solid #8b8b8b;
+}
+
+.contact-form {
+  width: 42%;
+  margin-left: 42%;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-row {
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 1.6vw;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: clamp(12px, 0.75vw, 14px);
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.4vw;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border-bottom: 1px solid rgba(17,17,17,0.22);
+  font-size: clamp(12px, 0.75vw, 14px);
+  font-weight: 300;
+  color: #111;
+  padding: 0.45vw 0 0.55vw;
+  background-color: transparent;
+}
+
+.form-message {
+  margin-top: 1vw;
+}
+
+.form-message textarea {
+  min-height: 9vw;
+  resize: none;
+  border: 1px solid rgba(17,17,17,0.18);
+  padding: 0.8vw;
+}
+
+.contact-btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5vw;
+}
+
+.contact-btn {
+  min-width: clamp(120px, 8vw, 160px);
+  height: clamp(40px, 2.5vw, 48px);
+  background-color: #1d1d1d;
+  color: #fff;
+  font-size: clamp(12px, 0.75vw, 14px);
+  font-weight: 600;
+}
+
+.contact-bg-text {
+  position: absolute;
+  left: 0;
+  bottom: -1vw;
+  font-size: clamp(90px, 11vw, 220px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: #737373;
+  white-space: nowrap;
+}
+
+
+/* ===== Contact input Focus === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #70ffea;
+  outline-offset: 3px;
+}

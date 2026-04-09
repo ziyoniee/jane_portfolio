@@ -1,0 +1,407 @@
+@media (max-width: 767px) {
+  /* ===== Header ===== */
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 10000;
+    pointer-events: none;
+  }
+
+  .menu-toggle {
+    top: 24px;
+    right: 20px;
+    width: 26px;
+    height: 18px;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    height: 620px;
+  }
+
+  .hero-label {
+    top: 72px;
+  }
+
+  .hero-label span {
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    top: 120px;
+    left: 50%;
+    width: 100%;
+    max-width: 360px;
+    height: 300px;
+    transform: translateX(-50%);
+  }
+
+  .hero-title-back {
+    top: 12px;
+    font-size: 42px;
+    line-height: 0.95;
+  }
+
+  .hero-video-frame {
+    top: 72px;
+    width: 180px;
+    border: 10px solid #131313;
+  }
+
+  .hero-title-front {
+    bottom: 12px;
+    font-size: 86px;
+    line-height: 0.9;
+  }
+
+  .hero-intro {
+    bottom: 48px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-intro p,
+  .hero-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+ /* ===== About ===== */
+.about {
+  position: relative;
+  min-height: auto;
+  padding: 88px 20px 96px;
+  overflow: hidden;
+}
+
+.about-bg-text {
+  position: absolute;
+  line-height: 0.82;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-bg-text-top {
+  top: 8px;
+  left: 0;
+  transform: rotate(180deg);
+  font-size: 88px;
+}
+
+.about-bg-text-bottom {
+  right: 0;
+  bottom: 8px;
+  font-size: 72px;
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  row-gap: 24px;
+  align-items: start;
+}
+
+/* 핵심: 이미지와 본문을 분리해서 grid에 올림 */
+.about-left-wrap {
+  display: contents;
+}
+
+.about-side {
+  position: static;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-side-item {
+  display: block;
+}
+
+.about-side-item p {
+  display: none;
+}
+
+.about-side-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.about-image {
+  position: static;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  padding-right: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-content {
+  position: static;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  min-width: 0;
+  margin-top: 0;
+}
+
+.about-name {
+  font-size: 28px;
+}
+
+.about-divider {
+  margin: 16px 0;
+}
+
+.about-text-kor,
+.about-text-eng {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-text-kor {
+  margin-bottom: 16px;
+}
+
+  /* ===== Project ===== */
+
+    .project-heading {
+    position: relative;
+    top: unset;
+    left: 0;
+    padding: 72px 20px 24px;
+    z-index: 20;
+    }
+
+    .project-main-title {
+    margin: 0;
+    font-size: 64px;
+    line-height: 0;
+    }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 140px;
+    gap: 0;
+    width: 100%;
+  }
+
+  .project-card.project-empty {
+    display: none;
+  }
+
+  .project-grid > a.project-card:nth-of-type(1),
+  .project-grid > a.project-card:nth-of-type(2),
+  .project-grid > a.project-card:nth-of-type(3) {
+    grid-column: span 2;
+  }
+
+  .project-grid > a.project-card:nth-of-type(4),
+  .project-grid > a.project-card:nth-of-type(5) {
+    grid-column: span 6;
+    grid-auto-rows: 180px;
+  }
+
+  .project-grid > a.project-card:nth-of-type(6),
+  .project-grid > a.project-card:nth-of-type(7) {
+    grid-column: span 3;
+  }
+
+  .project-card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-caption {
+    padding: 8px 10px;
+  }
+
+  .project-caption p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  /* ===== Profile ===== */
+  .profile {
+    padding: 72px 20px 28px;
+  }
+
+  .profile-header {
+    margin-bottom: 32px;
+  }
+
+  .profile-title {
+    padding-left: 0;
+    font-size: 64px;
+    line-height: 0.7;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .profile-left,
+  .profile-right {
+    width: 100%;
+  }
+
+  .profile-block {
+    margin-bottom: 32px;
+  }
+
+  .profile-block h4 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .profile-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  padding-left: 0;
+}
+
+.profile-block li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ededed;
+}
+
+.profile-block li::before {
+  content: "•";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ededed;
+}
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(34px, 48px));
+    justify-content: start;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .skill-item:nth-child(6),
+  .skill-item:nth-child(9) {
+    grid-column: 1;
+  }
+
+  .resume-btn {
+    min-width: 180px;
+    height: 46px;
+    font-size: 14px;
+    padding: 0 18px;
+  }
+
+  .profile-footer {
+    margin-top: 28px;
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  /* ===== Contact ===== */
+  .contact {
+    padding: 72px 20px 0;
+  }
+
+  .contact-inner {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-heading,
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-title {
+    font-size: 36px;
+    line-height: 0.1;
+  }
+
+  .contact-title-line {
+    margin-top: 10px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 8px 0 10px;
+  }
+
+  .form-message {
+    margin-top: 0;
+  }
+
+  .form-message textarea {
+    min-height: 140px;
+    padding: 12px;
+  }
+
+  .contact-btn-wrap {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .contact-btn {
+    min-width: 140px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .contact-bg-text {
+    position: static;
+    margin-top: 65px;
+    margin-bottom: 0;
+    font-size: 96px;
+    line-height: 0.7;
+    text-align: center;
+  }
+}

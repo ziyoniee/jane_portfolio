@@ -1,0 +1,85 @@
+/* ========================= Reset CSS ========================= */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Remove default margin */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, figure,
+dl, dd,
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body base */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* List reset */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Link reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Media reset */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form reset */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Input reset */
+input,
+textarea,
+select {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Table reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
