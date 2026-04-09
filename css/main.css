@@ -262,7 +262,7 @@ select {
 .about {
   position: relative;
   width: 100%;
-  min-height: 52vw;
+  min-height: 55vw;
   background-color: #f2f2f0;
   overflow: hidden;
 }
@@ -435,9 +435,9 @@ select {
 .project-main-title {
   margin: 0;
   font-family: "Pretendard Variable", "Pretendard", sans-serif;
-  font-size: 8.5vw;
+  font-size: 6.3vw;
   font-weight: 100;
-  line-height: 0.95;
+  line-height: 1.6;
   letter-spacing: -0.04em;
   color: #70ffea;
 }
@@ -515,7 +515,7 @@ select {
 }
 
 .profile-title {
-  font-size: 7vw;
+  font-size: 4.8vw;
   font-weight: 100;
   line-height: 0.7;
   letter-spacing: -0.05em;
@@ -552,18 +552,30 @@ select {
   font-weight: 500;
   color: #70ffea;
   margin-bottom: 1vw;
-  padding-bottom: 0.8vw;
+  padding-bottom: 0.4vw;
   border-bottom: 1px solid #9c9c9c;
 }
+
 
 .profile-block ul {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
+  padding-left: 0;
+}
+
+.profile-block li::before {
+  content: "•";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ededed;
 }
 
 .profile-block li {
-  font-size: clamp(10px, 0.75vw, 16px);
+  position: relative;
+  padding-left: 14px;
+  font-size: clamp(14px, 0.75vw, 16px);
   font-weight: 300;
   line-height: 1.7;
   color: #ededed;

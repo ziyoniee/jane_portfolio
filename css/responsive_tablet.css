@@ -72,6 +72,13 @@
         display: none;
     }
 
+    /* ===== project & work ==== */
+    .project-card img {
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+  }
+
     /* ===== Profile ===== */
     .profile {
     padding: 90px 50px 36px;
@@ -144,7 +151,7 @@
 
     .skill-item:nth-child(6),
     .skill-item:nth-child(9) {
-    grid-column: auto;
+    grid-column: 1;
     }
 
 
