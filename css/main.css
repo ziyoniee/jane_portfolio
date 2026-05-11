@@ -178,6 +178,8 @@ select {
   transform-origin: top center;
 }
 
+
+
 /* Back title */
 .hero-title-back {
   position: absolute;
@@ -206,6 +208,8 @@ select {
   overflow: hidden;
   border: 20px solid #131313;
   z-index: 3;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: center;
 }
 
 .hero-video {
@@ -214,6 +218,7 @@ select {
   object-fit: cover;
   filter: grayscale(100%) contrast(1.1) brightness(0.9);
 }
+
 
 /* Front Title */
 .hero-title-front {

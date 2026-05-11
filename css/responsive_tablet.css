@@ -1,8 +1,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .hero {
-    position: relative;
-    height: 760px;
+      height: 760px;
     }
 
     .hero-label {
@@ -14,11 +13,18 @@
     }
 
     .hero-visual {
-    transform: translate(-50%, -60px) scale(0.68);
+      position: relative;
+      transform: translate(-50%, -60px) scale(0.68);
+    }
+
+    .hero-video-frame{
+      position: absolute;
+      transform: translateX(-50%) rotate(90deg);
+      transform-origin: center;
     }
 
     .hero-intro {
-    bottom: 56px;
+    bottom: 80px;
     }
 
     .hero-intro p {

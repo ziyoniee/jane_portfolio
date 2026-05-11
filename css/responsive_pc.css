@@ -158,6 +158,12 @@
   transform: translate(-50%, -30px) scale(0.82);
   }
 
+  .hero-video-frame{
+    position: absolute;
+    transform: translateX(-50%) rotate(90deg);
+    transform-origin: center;
+  }
+
   .hero-intro {
   position: absolute;
   left: 50%;
