@@ -33,12 +33,12 @@
 
     /* ===== About ===== */
     .about {
-    height: 700px;
+    height: 880px;
     min-height: unset;
     }
 
     .about-container {
-    height: 700px;
+    height: 880px;
     min-height: unset;
     }
 
@@ -53,6 +53,7 @@
     width: 280px;
     min-width: 280px;
     padding-right: 0;
+    margin-top: 50px;
     }
 
     .about-content {
@@ -60,12 +61,6 @@
     top: 40px;
     width: 400px;
     min-width: unset;
-    }
-
-    .about-text-kor {
-    width: 400px;
-    font-size: 15px;
-    line-height: 1.9;
     }
 
     .about-text-eng {

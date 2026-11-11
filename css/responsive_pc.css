@@ -209,14 +209,10 @@
     min-width: unset;
   }
 
-  .about-text-kor {
-    width: 400px;
-    font-size: 15px;
-    line-height: 1.9;
-  }
+
 
   .about-text-eng {
-    width: 400px;
+    width: 600px;
     font-size: 14px;
     line-height: 1.7;
   }
